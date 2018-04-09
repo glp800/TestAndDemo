@@ -6,246 +6,240 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>新闻详情</title>
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-<div class="navbar navbar-default">
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"></a>
+            </div>
+            <!--在超小尺寸下才显示 显示为inline-block-->
+            <label id="toggle-label" class="visible-xs-inline-block" for="toggle-checkbox">MENU</label>
+            <input class="hidden" id="toggle-checkbox" type="checkbox">
+            <div class="hidden-xs">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">热闻 ⋅ 猫娱头条</a></li>
+                    <li class="active"><a href="index.html">首页</a></li>
+                    <li><a href="###">国内</a></li>
+                    <li><a href="###">国际</a></li>
+                    <li><a href="###">社会</a></li>
+                    <li><a href="###">公益</a></li>
+                    <li><a href="###">军事</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="signup.html">注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="index.html"></a>
+        <div class="col-md-8">
+            <h2 class="new-title">移动支付艰难出海： 扫一扫水土不服，信用卡支付也在升级！</h2>
+            <div class="news-status"><span>25K</span>阅读·<span>35</span>分钟前发布
+                <span class="label label-default">#经济</span>
+                <span class="label label-default">#支付</span>
+            </div>
+            <div class="news-content">
+                <blockquote>
+                    <p>移动支付艰难出海： 扫一扫水土不服，信用卡支付也在升级！</p>
+                </blockquote>
+                <img src="img/005.jpg">
+                <div class="center-s"><span>使用扫码支付的店员</span></div>
+                <p>
+                    随着电子商务与社交红包的普及，国内消费者已经把使用手机“扫一扫”买咖啡、骑自行车、叫外卖当作一种生活常态，而中国移动支付领域的“双寡头”——蚂蚁金服旗下的支付宝与腾讯财付通旗下的微信支付，都开始了加快海外布局的步伐。</p>
+                <p>由于在他国开展支付业务需要获得金融牌照，与当地已有牌照的公司合作成为推广移动支付的主流方式，仅在3月，双方就动作频频：3月21日，蚂蚁金服与印尼 Emtek 集团联合推出的电子钱包DANA 正式上线；3月26日，微信支付则与新加坡星网电子付款公司（NETS）开展合作，未来可让新加坡当地NETS 用户扫描微信二维码付款。</p>
+                <p> 也就是说，不论是通过第三方支付公司还是银行卡类的清算机构，腾讯和阿里巴巴都想在更多国家复制出“印尼版支付宝”或者是“新加坡版微信支付”。</p>
+                <p>单从开拓国家数量来看，支付宝暂居先发优势——最新数据显示，支付宝已覆盖全球38个国家和地区与数十万商户；微信支付也已登陆超过25个国家和地区，覆盖全球超过25万境外商户。</p>
+                <p>但巨头想要的不仅如此。 一个不得不面临的事实是，在境外使用支付宝或者微信支付的，主流仍是庞大的国内“出境游”群体。根据今年2月尼尔森发布的白皮书《2017中国境外旅游和消费趋势白皮书》显示：约有65%的中国游客在境外旅行时使用移动支付，而非中国游客仅占11%。
+                </p>
+                <p> 可以说，巨头在海外市场推广移动支付的目标客群，一定不会仅仅是出境游的中国旅客，而如何进行产品在他国的本地化策略，建立良好的产品体验， 就成为巨头推广移动支付的必经之路。</p>
+                <p> 水土不服的“扫一扫” 身处3月的新加坡街头，随处可见带有支付宝 Logo 的出租车穿梭在街头。在当地打开支付宝，各式折价券、商超推荐、退税入口琳琅满目；而在新加坡最繁华的乌节路商业街，随便走进一家店铺，竖着支付宝或者微信支付的牌子也在悄悄“宣誓”着主权。
+                </p>
+                <img src="img/zhifub.jpeg">
+                <div class="center-s"><span>新加坡街头打着支付宝广告的出租车</span></div>
+                <p>但在钛媒体走访多家商户时，对方均表示：“扫码支付的还是以中国人为主，本地人很少用手机支付。” 尽管可以通过机构合作的方式将移动支付推广进海外市场，但在产品落地阶段，移动支付工具仍阻碍重重。
+                </p>
+                <p>一方面，不同国家对于交易结算系统政策不同，大多海外银行也会对支付平台转账所承担的结算业务疑虑重重，这会造成有“支付工具”，但无卡可绑的尴尬局面，无形中提升了用户的使用门槛。 </p>
+                <p> “新加坡很多银行并不支持电子钱包对银行卡的在线转账，用户的钱只能通过电子钱包消费，提现的话需要去银行办理。”一位在海外经营第三方支付公司的业内人士告诉钛媒体。
+                </p>用户习惯的养成则是另一个壁垒，对于欧美等发达国家来说，发达健全的信用卡体系已经被消费者接受，人们对“扫一扫”的付款方式在安全与数据隐私层面充满疑虑；而在东南亚等地，现金依旧是最流行的支付方式，根据 PayPal 的一份调查显示，90% 的新加坡人表示现金是他们的支付优先选择。
+                </p>
+                <img src="img/XJPO.jpeg">
+                <div class="center-s"><span>新加坡商店里的扫码支付</span></div>
+                <P>
+                    90后的 Mandy 是一位出生在新加坡的华裔，作为使用Facebook、Instagram 长大的一代，Mandy 的日常支付方式依然以信用卡和现金为主，谈及中国的扫码支付，Mandy 有些疑惑：“信用卡已经很方便了，为什么还要去扫一扫？” </P>
+                <P>
+                    这样一个看似简单的疑问，已成为巨头对发达国家用户推广移动支付的首要难题。和中国市场淘宝之于电商、滴滴之于打车、微信之于社交的情况不同，仅拿东南亚11国为例，分散的市场让支付宝与微信支付必须花费更多精力与资源与各地的头部互联网企业达成合作，用移动应用的使用习惯倒逼海外用户“扔掉”信用卡。
+                </P>
+            </div>
         </div>
-        <!--在超小尺寸下才显示 显示为inline-block-->
-        <label id="toggle-label" class="visible-xs-inline-block" for="toggle-checkbox">MENU</label>
-        <input class="hidden" id="toggle-checkbox" type="checkbox">
-        <div class="hidden-xs">
-            <ul class="nav navbar-nav">
-                <li><a href="index.html">热闻 ⋅ 猫娱头条</a></li>
-                <li class="active"><a href="index.html">首页</a></li>
-                <li><a href="###">国内</a></li>
-                <li><a href="###">国际</a></li>
-                <li><a href="###">社会</a></li>
-                <li><a href="###">公益</a></li>
-                <li><a href="###">军事</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.html">登录</a></li>
-                <li><a href="signup.html">注册</a></li>
-            </ul>
-        </div>
-    </div>
-
-</div>
-<div class="container">
-    <div class="col-md-8">
-        <h2 class="new-title">移动支付艰难出海： 扫一扫水土不服，信用卡支付也在升级！</h2>
-        <div class="news-status"><span>25K</span>阅读·<span>35</span>分钟前发布
-            <span class="label label-default">#经济</span>
-            <span class="label label-default">#支付</span>
-        </div>
-        <div class="news-content">
-            <blockquote>
-                <p>移动支付艰难出海： 扫一扫水土不服，信用卡支付也在升级！</p>
-            </blockquote>
-            <img src="img/005.jpg">
-            <div class="center-s"><span>使用扫码支付的店员</span></div>
-            <p>
-                随着电子商务与社交红包的普及，国内消费者已经把使用手机“扫一扫”买咖啡、骑自行车、叫外卖当作一种生活常态，而中国移动支付领域的“双寡头”——蚂蚁金服旗下的支付宝与腾讯财付通旗下的微信支付，都开始了加快海外布局的步伐。</p>
-            <p>由于在他国开展支付业务需要获得金融牌照，与当地已有牌照的公司合作成为推广移动支付的主流方式，仅在3月，双方就动作频频：3月21日，蚂蚁金服与印尼 Emtek 集团联合推出的电子钱包DANA
-                正式上线；3月26日，微信支付则与新加坡星网电子付款公司（NETS）开展合作，未来可让新加坡当地NETS 用户扫描微信二维码付款。</p>
-            <p> 也就是说，不论是通过第三方支付公司还是银行卡类的清算机构，腾讯和阿里巴巴都想在更多国家复制出“印尼版支付宝”或者是“新加坡版微信支付”。</p>
-            <p>单从开拓国家数量来看，支付宝暂居先发优势——最新数据显示，支付宝已覆盖全球38个国家和地区与数十万商户；微信支付也已登陆超过25个国家和地区，覆盖全球超过25万境外商户。</p>
-            <p>但巨头想要的不仅如此。
-                一个不得不面临的事实是，在境外使用支付宝或者微信支付的，主流仍是庞大的国内“出境游”群体。根据今年2月尼尔森发布的白皮书《2017中国境外旅游和消费趋势白皮书》显示：约有65%的中国游客在境外旅行时使用移动支付，而非中国游客仅占11%。</p>
-            <p> 可以说，巨头在海外市场推广移动支付的目标客群，一定不会仅仅是出境游的中国旅客，而如何进行产品在他国的本地化策略，建立良好的产品体验， 就成为巨头推广移动支付的必经之路。</p>
-            <p> 水土不服的“扫一扫”
-                身处3月的新加坡街头，随处可见带有支付宝 Logo
-                的出租车穿梭在街头。在当地打开支付宝，各式折价券、商超推荐、退税入口琳琅满目；而在新加坡最繁华的乌节路商业街，随便走进一家店铺，竖着支付宝或者微信支付的牌子也在悄悄“宣誓”着主权。</p>
-            <img src="img/zhifub.jpeg">
-            <div class="center-s"><span>新加坡街头打着支付宝广告的出租车</span></div>
-            <p>但在钛媒体走访多家商户时，对方均表示：“扫码支付的还是以中国人为主，本地人很少用手机支付。”
-                尽管可以通过机构合作的方式将移动支付推广进海外市场，但在产品落地阶段，移动支付工具仍阻碍重重。</p>
-            <p>一方面，不同国家对于交易结算系统政策不同，大多海外银行也会对支付平台转账所承担的结算业务疑虑重重，这会造成有“支付工具”，但无卡可绑的尴尬局面，无形中提升了用户的使用门槛。 </p>
-            <p> “新加坡很多银行并不支持电子钱包对银行卡的在线转账，用户的钱只能通过电子钱包消费，提现的话需要去银行办理。”一位在海外经营第三方支付公司的业内人士告诉钛媒体。
-            </p>用户习惯的养成则是另一个壁垒，对于欧美等发达国家来说，发达健全的信用卡体系已经被消费者接受，人们对“扫一扫”的付款方式在安全与数据隐私层面充满疑虑；而在东南亚等地，现金依旧是最流行的支付方式，根据
-            PayPal 的一份调查显示，90% 的新加坡人表示现金是他们的支付优先选择。
-            </p>
-            <img src="img/XJPO.jpeg">
-            <div class="center-s"><span>新加坡商店里的扫码支付</span></div>
-            <P>
-                90后的 Mandy 是一位出生在新加坡的华裔，作为使用Facebook、Instagram 长大的一代，Mandy 的日常支付方式依然以信用卡和现金为主，谈及中国的扫码支付，Mandy
-                有些疑惑：“信用卡已经很方便了，为什么还要去扫一扫？” </P>
-            <P>
-                这样一个看似简单的疑问，已成为巨头对发达国家用户推广移动支付的首要难题。和中国市场淘宝之于电商、滴滴之于打车、微信之于社交的情况不同，仅拿东南亚11国为例，分散的市场让支付宝与微信支付必须花费更多精力与资源与各地的头部互联网企业达成合作，用移动应用的使用习惯倒逼海外用户“扔掉”信用卡。
-            </P>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="side-bar-card">
-            <div class="card-title">相关推荐</div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item clearfix">
-                        <!--no-padding-h去掉横向的padding   horizontal横向的-->
-                        <a href="" class="col-xs-5 no-padding-h">
+        <div class="col-md-4">
+            <div class="side-bar-card">
+                <div class="card-title">相关推荐</div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item clearfix">
+                            <!--no-padding-h去掉横向的padding   horizontal横向的-->
+                            <a href="" class="col-xs-5 no-padding-h">
                             <img src="img/005.jpg" alt="">
                         </a>
-                        <div href="" class="col-xs-7">
-                            <a href="news.html" class="title">移动支付艰难出海： 扫一扫水土不服，信用卡支付也在升级！</a>
+                            <div href="" class="col-xs-7">
+                                <a href="news.html" class="title">移动支付艰难出海： 扫一扫水土不服，信用卡支付也在升级！</a>
+                                <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item clearfix">
+                            <!--no-padding-h去掉横向的padding   horizontal横向的-->
+                            <a href="" class="col-xs-5 no-padding-h">
+                            <img src="img/2-56.jpg" alt="">
+                        </a>
+                            <div href="" class="col-xs-7">
+                                <a href="news.html" class="title">“港女北嫁”数量激增：内地男更有前途</a>
+                                <div class="desc"><span>12k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item clearfix">
+                            <!--no-padding-h去掉横向的padding   horizontal横向的-->
+                            <a href="" class="col-xs-5 no-padding-h">
+                            <img src="img/2-36.jpg" alt="">
+                        </a>
+                            <div href="" class="col-xs-7">
+                                <a href="news.html" class="title">《憨豆特工3》首支预告 罗温·艾金森“重出江湖”</a>
+                                <div class="desc"><span>10k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item clearfix">
+                            <!--no-padding-h去掉横向的padding   horizontal横向的-->
+                            <a href="" class="col-xs-5 no-padding-h">
+                            <img src="img/003.jpg" alt="">
+                        </a>
+                            <div href="" class="col-xs-7">
+                                <a href="news.html" class="title">中国独角兽报告：集中北上杭深 近半与BAT相关</a>
+                                <div class="desc"><span>14k</span>阅读&nbsp;&nbsp;<span>6k</span>评论</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item clearfix">
+                            <!--no-padding-h去掉横向的padding   horizontal横向的-->
+                            <a href="" class="col-xs-5 no-padding-h">
+                            <img src="img/002.jpg" alt="">
+                        </a>
+                            <div href="" class="col-xs-7">
+                                <a href="news.html" class="title">起底“二选一”：先排他的支付宝如今何以被零售商反制？</a>
+                                <div class="desc"><span>50k</span>阅读&nbsp;&nbsp;<span>36k</span>评论</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side-bar-card">
+                <div class="card-title"><span>24小时热文</span></div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item">
+                            <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                            <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item">
+                            <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                            <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item">
+                            <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                            <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item">
+                            <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                            <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item">
+                            <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                            <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item">
+                            <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                            <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item">
+                            <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                            <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item">
+                            <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                            <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item">
+                            <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                            <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item">
+                            <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
                             <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item clearfix">
-                        <!--no-padding-h去掉横向的padding   horizontal横向的-->
-                        <a href="" class="col-xs-5 no-padding-h">
-                            <img src="img/2-56.jpg" alt="">
-                        </a>
-                        <div href="" class="col-xs-7">
-                            <a href="news.html" class="title">“港女北嫁”数量激增：内地男更有前途</a>
-                            <div class="desc"><span>12k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item clearfix">
-                        <!--no-padding-h去掉横向的padding   horizontal横向的-->
-                        <a href="" class="col-xs-5 no-padding-h">
-                            <img src="img/2-36.jpg" alt="">
-                        </a>
-                        <div href="" class="col-xs-7">
-                            <a href="news.html" class="title">《憨豆特工3》首支预告 罗温·艾金森“重出江湖”</a>
-                            <div class="desc"><span>10k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item clearfix">
-                        <!--no-padding-h去掉横向的padding   horizontal横向的-->
-                        <a href="" class="col-xs-5 no-padding-h">
-                            <img src="img/003.jpg" alt="">
-                        </a>
-                        <div href="" class="col-xs-7">
-                            <a href="news.html" class="title">中国独角兽报告：集中北上杭深 近半与BAT相关</a>
-                            <div class="desc"><span>14k</span>阅读&nbsp;&nbsp;<span>6k</span>评论</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item clearfix">
-                        <!--no-padding-h去掉横向的padding   horizontal横向的-->
-                        <a href="" class="col-xs-5 no-padding-h">
-                            <img src="img/002.jpg" alt="">
-                        </a>
-                        <div href="" class="col-xs-7">
-                            <a href="news.html" class="title">起底“二选一”：先排他的支付宝如今何以被零售商反制？</a>
-                            <div class="desc"><span>50k</span>阅读&nbsp;&nbsp;<span>36k</span>评论</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="side-bar-card">
-            <div class="card-title"><span>24小时热文</span></div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item">
-                        <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item">
-                        <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item">
-                        <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item">
-                        <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item">
-                        <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item">
-                        <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item">
-                        <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item">
-                        <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item">
-                        <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="list">
-                    <div class="item">
-                        <a href="news.html" class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        <div class="desc"><span>15k</span>阅读&nbsp;&nbsp;<span>1k</span>评论</div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-</div>
-<div class="footer">
-    <div class="container">
-        <span>©2018 猫娱</span> <a href="">使用猫娱前必读</a> | <a href="">猫娱开放平台</a> | <a href="">建议与反馈</a> |  <a href="">帮助与联系</a> | <a href="">滇ICP备16000006号</a>
+    <div class="footer">
+        <div class="container">
+            <span>©2018 猫娱</span> <a href="">使用猫娱前必读</a> | <a href="">猫娱开放平台</a> | <a href="">建议与反馈</a> | <a href="">帮助与联系</a> | <a href="">滇ICP备16000006号</a>
+        </div>
     </div>
-</div>
 </body>
 
 </html>
