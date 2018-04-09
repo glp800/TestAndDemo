@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"></a>
+        </div>
+        <!--在超小尺寸下才显示 显示为inline-block-->
+        <label id="toggle-label" class="visible-xs-inline-block" for="toggle-checkbox">MENU</label>
+        <input class="hidden" id="toggle-checkbox" type="checkbox">
+        <div class="hidden-xs">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">热闻 ⋅ 猫娱头条</a></li>
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="###">国内</a></li>
+                <li><a href="###">国际</a></li>
+                <li><a href="###">社会</a></li>
+                <li><a href="###">公益</a></li>
+                <li><a href="###">军事</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html">登录</a></li>
+                <li><a href="signup.html">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container container-small">
+    <h1>注册
+        <small>已有账号？<a href="login.html">登录</a></small>
+    </h1>
+    <form action="">
+        <div class="form-group">
+            <label for="">用户名/手机/邮箱</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">验证码</label>
+            <div class="input-group">
+                <input type="text" class="form-control">
+                <div class="input-group-btn">
+                    <button class="btn btn-primary">获取验证码<!--（<span>120</span>S）--></button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="">密码</label>
+            <input type="password" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">确认密码</label>
+            <input type="password" class="form-control">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit" for="">注册</button>
+        </div>
+        <div class="form-group">
+            注册猫娱头条即代表您同意<a class="c-red" href="#">《猫娱头条服务条款》</a>。
+        </div>
+    </form>
+</div>
+<div class="footer">
+    <div class="container">
+        <span>©2018 猫娱</span> <a href="">使用猫娱前必读</a> | <a href="">猫娱开放平台</a> | <a href="">建议与反馈</a> | <a
+            href="">帮助与联系</a> | <a href="">滇ICP备16000006号</a>
+    </div>
+</div>
 </body>
 </html>

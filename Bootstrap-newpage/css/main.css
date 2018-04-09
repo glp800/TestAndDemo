@@ -1,3 +1,11 @@
+html, body {
+    height: 100%;
+}
+
+a, h1, h2, h3, h4, h5, h6, span, p, div, input, label {
+    font-family: "微软雅黑", "Microsoft YaHei", serif; /*无衬线体*/
+}
+
 img {
     display: block;
     max-width: 100%; /*最大宽度不超过母元素*/
@@ -8,10 +16,6 @@ img,
 .side-bar-card {
     border-radius: 3px;
 }
-
-/*a:hover {*/
-/*text-decoration: none;*/
-/*}*/
 
 .navbar {
     border-radius: 0;
@@ -137,7 +141,7 @@ img,
     font-size: 90%;
     color: #999999;
     border-bottom: 1px solid rgba(0, 0, 0, .05);
-    padding-bottom: 5px;
+    /*padding-bottom: 5px;*/
 }
 
 .new-title {
@@ -162,7 +166,7 @@ img,
     text-indent: 2em;
 }
 
-.news-content .center-s{
+.news-content .center-s {
     width: 100%;
     text-align: center;
 }
@@ -178,5 +182,93 @@ img,
 .news-content img {
     display: block;
     width: 80%;
-    margin: 10px auto;
+    margin: 5px auto;
+}
+
+.no-padding-h {
+    padding-left: 0;
+}
+
+.col-md-4 .side-bar-card .col-xs-7 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: #f8f8f8;
+    color: #666;
+    margin-top: 20px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #666;
+}
+
+.footer a:hover {
+    color: #337ab7;
+}
+
+.container-small {
+    max-width: 500px;
+    /*为了使内容过少时footer不上浮，否则很难看*/
+    height: 77%;
+}
+
+/*.form-group .navbar-right {*/
+/*margin-right: 0;*/
+/*}*/
+
+.c-red {
+    color: #db0d3a;
+}
+
+.c-red:hover {
+    color: #db0d3a;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #ea0c3c;
+    border-color: #db0d3a;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.input-group-btn:hover,
+.input-group-btn:active,
+.input-group-btn:focus {
+    color: #fff;
+    background-color: #d70c35;
+    border-color: #cc0c36;
+    outline: none;
+}
+
+.btn.btn-primary:focus.btn-primary:active {
+    color: #fff;
+    background-color: #d70c35;
+    border-color: #cc0c36;
+}
+
+#toggle-checkbox:checked ~ div {
+    display: block !important;
+}
+
+#toggle-label {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #666666;
+    cursor: pointer;
+    display: none;
+}
+
+#toggle-label:hover {
+    color: #333333;
 }
