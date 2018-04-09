@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>css3实现页面平滑过渡效果</title>
+		<meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1" />
+		<!--让ie使用最新的渲染模式-->
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<!--宽度等于设备的宽度，不允许用户缩放-->
+		<link rel="stylesheet" href="css/reset.css" type="text/css" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="st-container">
+				<!--nav begin-->
+				<input type="radio" name="radio-set" checked="checked" id="st-control-1" />
+				<a href="#st-panel-1">This is a new world</a>
+				<input type="radio" name="radio-set" id="st-control-2" />
+				<a href="#st-panel-2">Happiness</a>
+				<input type="radio" name="radio-set" id="st-control-3" />
+				<a href="#st-panel-3">Morning Sr</a>
+				<input type="radio" name="radio-set" id="st-control-4" />
+				<a href="#st-panel-4">Lost youth</a>
+				<input type="radio" name="radio-set" id="st-control-5" />
+				<a href="#st-panel-5">Recalling the past</a>
+				<!--nav end content bagin-->
+				<div class="st-scroll">
+					<section class="st-panel" id="st-panel-1">
+						<div class="st-desc" data-icon = "H"></div>
+						<h2>这是一个全新的开始</h2>
+						<p>每天都冒出很多念头，那些不死的才叫做梦想。</p>
+					</section>
+					<section class="st-panel st-color" id="st-panel-2">
+						<div class="st-desc" data-icon = "2"></div>
+						<h2>在这里你可以展翅飞翔</h2>
+						<p>失望过，彷徨过，害怕过，也曾想放弃。但只要咬咬牙，坚持下来，你就看到胜利的曙光</p>
+					</section>
+					<section class="st-panel " id="st-panel-3">
+						<div class="st-desc" data-icon = "B"></div>
+						<h2>早安Mr.L</h2>
+						<p>每天都是全新的开始，每天都是新的征程，每天你要笑口常开，每天你要快快乐乐</p>
+					</section>
+					<section class="st-panel st-color" id="st-panel-4">
+						<div class="st-desc" data-icon = "x"></div>
+						<h2>平平淡淡才是真</h2>
+						<p>回不去的青春，逝去的往昔，一点一滴，像沙漏，倒计时着</p>
+					</section>
+					<section class="st-panel" id="st-panel-5">
+						<div class="st-desc" data-icon = "C"></div>
+						<h2>闭目止息 回忆比经历还多</h2>
+						<p>大千世界，我们并不是缺少一个说话的朋友，而是渴望一个理解自己读懂自己的伙伴。</p>
+					</section>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
