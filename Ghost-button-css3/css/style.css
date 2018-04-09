@@ -1,0 +1,179 @@
+div{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #333;
+}
+
+.box{
+	width: 800px;
+	height: 280px;
+	margin: 50px auto;
+	position: relative;
+}
+.box .link{
+	width:205px;
+	height: 280px;
+	float: left;
+	margin: 0 20px;
+}
+
+.link .icon{
+	display: inline-block;
+	width: 100%;
+	height: 190px;
+	/* 过渡 */
+	transition:0.3s ease-out;
+	-webkit-transition:0.3s ease-out;
+	-moz-transition:0.3s ease-out;
+	-o-transition:0.3s ease-out;
+}
+
+.link-mission .icon{
+	background: url(http://7q5cdt.com1.z0.glb.clouddn.com/ghost-button-css3-mission.png) no-repeat center center;
+}
+.link-play .icon{
+	background: url(http://7q5cdt.com1.z0.glb.clouddn.com/ghost-button-css3-play.png) no-repeat center center;
+}
+.link-touch .icon{
+	background: url(http://7q5cdt.com1.z0.glb.clouddn.com/ghost-button-css3-touch.png) no-repeat center center;
+}
+
+/* 旋转，缩放 */
+.link .icon:hover{
+	transform:rotate(360deg) scale(1.2);
+	-webkit-transform:rotate(360deg) scale(1.2);
+	-moz-transform:rotate(360deg) scale(1.2);
+	-o-transform:rotate(360deg) scale(1.2);
+	-ms-transform:rotate(360deg) scale(1.2);
+}
+
+.button{
+	display: block;
+	width: 180px;
+	height:50px;
+	line-height: 50px;
+	text-decoration: none;
+	color: #2dcb70;
+	font-family: Arial;
+	font-weight: bolder;
+	border:2px solid rgba(255,255,255,0.2);
+	padding-left: 20px;
+	margin: 0 auto;
+	position: relative;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	background: url(http://7q5cdt.com1.z0.glb.clouddn.com/ghost-button-css3-allow.png) no-repeat 130px center;
+	transition:0.4s ease;
+	-webkit-transition:0.4s ease;
+	-moz-transition:0.4s ease;
+	-o-transition:0.4s ease;
+}
+.button:hover{
+	border: 2px solid rgba(255,255,255,1);
+	background: url(http://7q5cdt.com1.z0.glb.clouddn.com/ghost-button-css3-allow.png) no-repeat 140px center;
+}
+
+/* 四条线 */
+.button .line{
+	display: block;
+	position: absolute;
+	background: none;
+	transition:0.4s ease;
+	-webkit-transition:0.4s ease;
+	-moz-transition:0.4s ease;
+	-o-transition:0.4s ease;
+}
+.button:hover .line{
+	background: #fff;
+}
+/* 初始位置 */
+.button .line-top{
+	height: 2px;
+	width: 0px;
+	left:-110%;
+	top:-2px;
+}
+/* 最终位置, 只写有变化的属性 */
+.button:hover .line-top{
+	width: 180px;
+	left: -2px;
+}
+
+/* 初始位置 */
+.button .line-right{
+	height: 0px;
+	width: 2px;
+	top:-110%;
+	right:-2px;
+}
+/* 最终位置, 只写有变化的属性 */
+.button:hover .line-right{
+	height: 50px;
+	top: -2px;
+}
+
+/* 初始位置 */
+.button .line-bottom{
+	height: 2px;
+	width: 0px;
+	right:-110%;
+	bottom:-2px;
+}
+/* 最终位置, 只写有变化的属性 */
+.button:hover .line-bottom{
+	width: 180px;
+	right: -2px;
+}
+
+/* 初始位置 */
+.button .line-left{
+	height: 0px;
+	width: 2px;
+	bottom: -110%;
+	left: -2px;
+}
+/* 最终位置, 只写有变化的属性 */
+.button:hover .line-left{
+	height: 50px;
+	bottom: -2px;
+}
+
+/* tip */
+.tip{
+	position: absolute;
+	padding:0 14px;
+	height: 35px;
+	line-height: 35px;
+	background: #2dcb70;
+	color: #fff;
+	font-size: 18px;
+	margin: 0 auto;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	top:100px;
+	opacity: 0;
+}
+.tip em{
+	font-style: normal;
+}
+.tip span{
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border: 7px solid transparent;
+	border-top-color: #2dcb70;
+	position: absolute;
+	top: 35px;
+	left: 50%;
+	margin-left: -3px;
+}
