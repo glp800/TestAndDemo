@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-cn">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>3D立体小方块</title>
+	 <style id="css">
+	 *{
+		 margin:0px;
+		 padding:0px;
+	 }
+	#wrap{
+		width:800px;
+		height:360px;
+		margin:200px auto;
+		position:relative;
+	}
+	#pic{
+		width:800px;
+		height:360px;
+		perspective:800px;/*景深为800像素*/
+	}
+	#pic ul li{
+		
+		height:360px;
+		float:left;
+		list-style-type:none;
+		position:relative;
+		transform-style:preserve-3d;/*构建一个3D的场景*/
+		transform:translateZ(-180px);
+	}
+	#pic ul li div{
+		/* width:200px; */
+		height:360px;
+		position:absolute;
+	}
+	/* css3新增的子选择器，括号内的数字可以改变，选中对应的项 */
+	#pic ul li div:nth-child(1){
+		top:-360px;
+		transform-origin:bottom;
+		transform:translateZ(180px) rotateX(90deg);
+		background:url("images/3.jpg");
+	}
+	#pic ul li div:nth-child(2){
+		top:360px;
+		/*旋转的轴心为上*/
+		transform-origin:top;
+		transform:translateZ(180px) rotateX(-90deg);
+		background:url("images/2.jpg");
+
+	}
+	#pic ul li div:nth-child(3){
+		transform:translateZ(180px);
+		background:url("images/1.jpg");
+	
+	}
+	#pic ul li div:nth-child(4){
+		transform:translateZ(-180px) rotateX(180deg);
+		background:url("images/4.jpg");
+	
+	}
+	#pic ul li:nth-child(1){transition:1s;}/*过渡*/
+	#pic ul li:nth-child(2){transition:1s;}
+	#pic ul li:nth-child(3){transition:1s;}
+	#pic ul li:nth-child(4){transition:1s;}
+	
+	#tab{
+		position:absolute;
+		width:100px;
+		height:20px;
+		right:10px;
+		bottom:10px;
+	}
+	#tab ul li{
+		width:20px;
+		height:20px;
+		background:#999;
+		color:#fff;
+		font-size:12px;
+		text-align:center;
+		line-height:20px;
+		font-family:"微软雅黑";
+		float:left;
+		cursor:pointer;
+		margin:0 2px;
+		border-radius:100px;/* 把它变成圆 */
+		list-style-type:none;
+	}
+	#tab ul li.on{
+		background:#ffcc00;
+	}
+	 </style>
+ </head>
+ <body>
+	 <div id="wrap">
+		<div id="pic">
+			<ul>
+				<!-- <li>
+					<div>上</div>
+					<div>下</div>
+					<div>前</div>
+					<div>后</div>
+				</li>
+				<li>
+					<div>上</div>
+					<div>下</div>
+					<div>前</div>
+					<div>后</div>
+				</li>
+				<li>
+					<div>上</div>
+					<div>下</div>
+					<div>前</div>
+					<div>后</div>
+				</li>
+				<li>
+					<div>上</div>
+					<div>下</div>
+					<div>前</div>
+					<div>后</div>
+				</li> -->
+			</ul>
+
+		</div>
+		<div id="tab">
+			<ul>
+				<li class="on">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+	 </div>
+
+	 <script>
+		//通过标签名去获取元素节点
+		var tabLi=document.getElementById("tab").getElementsByTagName("li");
+		var oUl=document.getElementsByTagName("ul")[0];
+		var oCss=document.getElementById("css");
+		for (var i=0;i<tabLi.length;i++)
+		{
+			tabLi[i].index=i;//自定义一个index属性
+			tabLi[i].onclick=function(){
+				for (var j=0;j< tabLi.length;j++)
+				{
+					tabLi[j].className="";//先把class名清空
+				}
+				this.className="on";//this代表当前点击的li
+				oCss.innerHTML+="#pic ul li{transform:translateZ(-180px) rotateX("+this.index*(-90)+"deg);}";
+			}
+		}
+		play(60);//分块
+		function play(num){
+			var width=800/num;
+			var uHtml='',pHtml='',zHtml='',z=0,tHtml='';
+			for (var i=0;i<num;i++)
+			{
+				if(i>=num/2)
+				{
+					z--;
+					zHtml+='#pic ul li:nth-child('+(i+1)+'){z-index:'+z+';}';
+				}
+				uHtml+='<li><div></div><div></div><div></div><div></div></li>';
+				pHtml+='#pic ul li:nth-child('+(i+1)+') div{background-position:'+-width*i+'px}';
+				tHtml+='#pic ul li:nth-child('+(i+1)+'){transition:1s '+0.01*i+'s}';
+			}
+			oUl.innerHTML=uHtml;
+			oCss.innerHTML+=pHtml+zHtml+tHtml+'#pic ul li,#pic ul li div{width:'+width+'px}';
+			
+		}
+	 </script>
+ </body>
+</html>
