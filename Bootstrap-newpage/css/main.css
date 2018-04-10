@@ -1,6 +1,6 @@
-html, body {
-    height: 100%;
-}
+/*html, body {*/
+/*height: 100%;*/
+/*}*/
 
 a, h1, h2, h3, h4, h5, h6, span, p, div, input, label {
     font-family: "微软雅黑", "Microsoft YaHei", serif; /*无衬线体*/
@@ -126,10 +126,6 @@ img,
     text-decoration: none;
 }
 
-/*.side-bar-card .card-body .list .item .title {*/
-/*display: block;*/
-/*padding-bottom: 5px;*/
-/*}*/
 .side-bar-card .card-body .list .item .title {
     display: block;
     margin-bottom: 5px;
@@ -204,8 +200,12 @@ img,
     text-align: center;
 }
 
+.footer-login, .footer-signup {
+    background-color: #ffffff;
+}
+
 .footer a {
-    color: #666;
+    color: #474747;
 }
 
 .footer a:hover {
@@ -215,12 +215,9 @@ img,
 .container-small {
     max-width: 500px;
     /*为了使内容过少时footer不上浮，否则很难看*/
-    height: 77%;
+    /*height: 100%;*/
+    /*height: 500px;*/
 }
-
-/*.form-group .navbar-right {*/
-/*margin-right: 0;*/
-/*}*/
 
 .c-red {
     color: #db0d3a;
