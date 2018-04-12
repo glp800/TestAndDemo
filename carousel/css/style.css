@@ -50,11 +50,11 @@ a {
 }
 
 #main .container .itema3 {
-    background-color: #3e3e3e;
+    background-color: #414141;
 }
 
 #main .container .itema4 {
-    background-color: #2b2b2b;
+    background-color: #383838;
 }
 
 #main .prev,
@@ -142,4 +142,14 @@ a {
 
 #main .container .item {
     left: 0;
+}
+#main .container a:before{
+    content:"";
+    display:inline-block;
+    height:50%;
+    vetical-align:middle;
+}
+#main .container a h1{
+    display: inline-block;
+    margin-top:-20px; 
 }
