@@ -1,7 +1,7 @@
 /*初始化序列号*/
 var a = 0;
 var b = 0;
-var c = $('.pic ul li');
+var c = $('.container ul li');
 
 /*初始化上一个展示的里的序列号*/
 function next() {
