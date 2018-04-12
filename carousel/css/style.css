@@ -10,12 +10,14 @@ a {
     background-color: #ffffff;
 }
 
-#main, #main .container {
+#main,
+#main .container {
     position: relative;
     overflow: hidden;
 }
 
-#main .container ul, #main .container ul li a h1 {
+#main .container ul,
+#main .container ul li a h1 {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -36,7 +38,6 @@ a {
 
 #main .container ul li a {
     text-align: center;
-    line-height: 600px;
     color: #ffffff;
 }
 
@@ -83,10 +84,14 @@ a {
 #main .prev:hover,
 #main .next:hover {
     transform: scale(0.8);
-    -ms-transform: scale(0.8); /* IE 9 */
-    -moz-transform: scale(0.8); /* Firefox */
-    -webkit-transform: scale(0.8); /* Safari 和 Chrome */
-    -o-transform: scale(0.8); /* Opera */
+    -ms-transform: scale(0.8);
+    /* IE 9 */
+    -moz-transform: scale(0.8);
+    /* Firefox */
+    -webkit-transform: scale(0.8);
+    /* Safari 和 Chrome */
+    -o-transform: scale(0.8);
+    /* Opera */
 }
 
 #main .nav {
@@ -129,7 +134,6 @@ a {
 
 #main .nav ul li:last-child {
     margin-right: 0;
-
 }
 
 #main .nav ul li.bgC {
@@ -140,3 +144,16 @@ a {
     left: 0;
 }
 
+#main .container a:before {
+    content: "";
+    display: inline-block;
+    height: 50%;
+    vetical-align: middle;
+}
+
+#main .container a h1 {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    /*vetical-align: middle;*/
+}
