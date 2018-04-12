@@ -143,17 +143,3 @@ a {
 #main .container .item {
     left: 0;
 }
-
-#main .container a:before {
-    content: "";
-    display: inline-block;
-    height: 50%;
-    vetical-align: middle;
-}
-
-#main .container a h1 {
-    display: inline-block;
-    width: 50%;
-    height: auto;
-    /*vetical-align: middle;*/
-}
