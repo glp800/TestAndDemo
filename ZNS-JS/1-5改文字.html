@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<title>改文字</title>
-		<style type="text/css">
-			/*选择div中第二个iput 如果不标注#div1那么所有被包裹的第二个iput都将被选择*/
-			
-			#div1 input:nth-child(2) {
-				cursor: pointer;
-			}
-		</style>
-		<script type="text/javascript">
-			function setText()
-			{
-				var oText=document.getElementById('text1');
-				oText.value='提交成功！'
-			}
-		</script>
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <title>改文字</title>
+    <style type="text/css">
+    /*选择div中第二个iput 如果不标注#div1那么所有被包裹的第二个iput都将被选择*/
 
-	<body>
-		<div id="div1">
-			<input id="text1" type="text" value="Administrator" />
-			<input type="button" value="改文字" title="提交用户名" onclick="setText()" />
-		</div>
-	</body>
+    #div1 input:nth-child(2) {
+        cursor: pointer;
+    }
+    </style>
+    <script type="text/javascript">
+    function setText() {
+        var oText = document.getElementById('text1');
+        oText.value = '提交成功！'
+    }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <input id="text1" type="text" value="Administrator" />
+        <input type="button" value="改文字" title="提交用户名" onclick="setText()" />
+    </div>
+</body>
 
 </html>

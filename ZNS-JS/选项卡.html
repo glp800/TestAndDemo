@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>选项卡</title>
+  <style type="text/css">
+  #div1 .active {
+    background: #2783FF;
+    color: #fff;
+  }
+
+  #div1 div {
+    width: 300px;
+    height: 300px;
+    background-color: #ccc;
+    border: 1px solid #999;
+    display: none;
+    margin-top: 5px;
+  }
+  </style>
+  <script type="text/javascript">
+  window.onload = function() {
+    var oDiv = document.getElementById('div1');
+    var aBtn = oDiv.getElementsByTagName('input');
+    var aDiv = oDiv.getElementsByTagName('div');
+    // 循环
+    for (var i = 0; i < aBtn.length; i++) {
+      // 给所有按钮添加点击事件
+      aBtn[i].index = i;
+      aBtn[i].onclick = function() {
+        // this:当前发生时间的元素
+        for (var i = 0; i < aBtn.length; i++) {
+          aBtn[i].className = '';
+          aDiv[i].style.display = 'none';
+        }
+        this.className = 'active';
+        // 找到当前div
+        // alert(this.index);
+        aDiv[this.index].style.display = 'block';
+      };
+    }
+  };
+  </script>
+</head>
+
+<body>
+  <div id="div1">
+    <input class="active" type="button" value="教育">
+    <input type="button" value="培训">
+    <input type="button" value="招生">
+    <input type="button" value="出国">
+    <div style="display: block;">11111</div>
+    <div>22222</div>
+    <div>33333</div>
+    <div>44444</div>
+  </div>
+</body>
+
+</html>

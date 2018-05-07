@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<title>if的使用</title>
-		<style type="text/css">
-			ul,
-			li,
-			span {
-				margin: 0;
-				padding: 0;
+<head>
+  <meta charset="UTF-8">
+  <title>if的使用</title>
+  <style type="text/css">
+  ul,
+  li,
+  span {
+    margin: 0;
+    padding: 0;
+  }
 
-			}
-			li{
-				cursor: pointer;
-				
-			}
-			.box-i {
-				width: 86px;
-				height: 180px;
-				margin: 60px;
-				overflow: hidden;				
-			}
-			
-			span {
-				background: #333333;
-				display: block;
-				width: 75px;
-				height: 30px;
-				color: #ffffff;
-				padding-left: 10px;
-				line-height: 30px;
-				font-weight: 400;
-				cursor: pointer;
-			}
-			
-			#box {
-				list-style: none;
-			}
-			
-			#box li {
-				width: 65px;
-				padding: 2px 10px;
-				font-weight: 200;
-				background: #CCCCCC;
-			}
-			
-			#box li:hover {
-				color: #F8F8FF;
-				background: #808080;
-			}
-		</style>
-		<script type="text/javascript">
-			function showHide() {
-				var oDiv = document.getElementById('box');
-				if(oDiv.style.display == 'none') {
-					oDiv.style.display = 'block';
-				} else {
-					oDiv.style.display = 'none';
-				}
-			}
-		</script>
-	</head>
+  li {
+    cursor: pointer;
+  }
 
-	<body>
-		<!--if 如果
+  .box-i {
+    width: 100px;
+    height: 180px;
+    margin: 60px;
+    overflow: hidden;
+  }
+
+  span {
+    background: #333333;
+    display: block;
+    width: 100px;
+    height: 30px;
+    color: #ffffff;
+    padding-left: 10px;
+    line-height: 30px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  #box {
+    list-style: none;
+  }
+
+  #box li {
+    width: 100px;
+    padding: 2px 10px;
+    font-weight: 200;
+    background: #CCCCCC;
+  }
+
+  #box li:hover {
+    color: #F8F8FF;
+    background: #808080;
+  }
+  </style>
+  <script type="text/javascript">
+  function showHide() {
+    var oDiv = document.getElementById('box');
+    if (oDiv.style.display == 'none') {
+      oDiv.style.display = 'block';
+    } else {
+      oDiv.style.display = 'none';
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!--if 如果
 		判断 条件成立执行语句1 条件不成立执行语句2
 		if（条件）
 		{
@@ -73,18 +73,18 @@
 		else{
 			语句2
 		}-->
-		<!--<input type="button" value="导航" onclick="showHide()" />-->
-		<div class="box-i">
-			<span onclick="showHide()">导&nbsp;&nbsp;航</span>
-			<ul id="box">
-				<li>主&nbsp;页</li>
-				<li>关于我们</li>
-				<li>联系我们</li>
-				<li>我不高兴</li>
-				<li>我很开心</li>
-				<li>我很伤心</li>
-			</ul>
-		</div>
-	</body>
+  <!--<input type="button" value="导航" onclick="showHide()" />-->
+  <div class="box-i">
+    <span onclick="showHide()">导&nbsp;&nbsp;航</span>
+    <ul id="box">
+      <li>主&nbsp;页</li>
+      <li>关于我们</li>
+      <li>联系我们</li>
+      <li>我不高兴</li>
+      <li>我很开心</li>
+      <li>我很伤心</li>
+    </ul>
+  </div>
+</body>
 
 </html>
