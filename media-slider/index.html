@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Bootstrap 实例 - 简单的轮播（Carousel）插件</title>
+		<!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap3.3.7.css">
+		<link rel="shortcut icon" href="https://raw.githubusercontent.com/centosl/centosl.github.io/master/favicon.ico" type="image/x-icon" />
+		<style type="text/css">
+			#main-content .carousel-inner .item {
+				background-size: cover;
+				/*让图片覆盖满整个div*/
+				background-position: center, center;
+				/*让图片在div里水平垂直居中*/
+				background-repeat: no-repeat;
+				height: 410px;
+			}
+			
+			@media (max-width:768px) {
+				#main-content .carousel-inner .item {
+					height: auto;
+				}
+				#main-content .carousel-inner .item img {
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="main-content" class="carousel slide" data-ride="carousel">
+			<!--<div id="myCarousel1" class="carousel slide" data-ride="carousel">-->
+			<!-- 活动指示器 -->
+			<ol class="carousel-indicators">
+				<li data-target="#main-content" data-slide-to="0" class="active"></li>
+				<li data-target="#main-content" data-slide-to="1"></li>
+				<li data-target="#main-content" data-slide-to="2"></li>
+				<li data-target="#main-content" data-slide-to="3"></li>
+			</ol>
+			<!-- 轮播项-->
+			<div class="carousel-inner" role="listbox">
+				<div class="item" data-image-lg="img/slide_01_2000x410.jpg" data-image-xs="img/slide_01_640x340.jpg"></div>
+				<div class="item" data-image-lg="img/slide_02_2000x410.jpg" data-image-xs="img/slide_02_640x340.jpg"></div>
+				<div class="item active" data-image-lg="img/slide_03_2000x410.jpg" data-image-xs="img/slide_03_640x340.jpg"></div>
+				<div class="item" data-image-lg="img/slide_04_2000x410.jpg" data-image-xs="img/slide_04_640x340.jpg"></div>
+			</div>
+			<!-- 控制按钮 需要字体文件 否则会不显示箭头-->
+			<a class="left carousel-control" href="#main-content" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#main-content" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only" style="font-size：72px;">Next</span>
+			</a>
+		</div>
+		<!-- <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script> -->
+		<!-- <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+		<script type="text/javascript" src="js/jquery3.3.1.js"></script>
+		<script type="text/javascript" src="js/bootstrap3.3.7.js"></script>
+		
+		<!--页面内的js-->
+		<!--$(function() {…}); 包含在这个匿名函数内的内容会<<在整个dom加载完之后再执行>>，可以防止全局变量污染-->
+		<!--;(function() {…}); 这个匿名函数可以防止全局变量污染-->
+		<script>
+			$(function() {
+				/**
+				 * 根据屏幕宽度的变化决定轮播图片应该展示什么 5    */
+				function resize() {
+					// 获取屏幕宽度
+					var windowWidth = $(window).width();
+					// 判断屏幕属于大还是小
+					var isSmallScreen = windowWidth < 767;
+					// 根据大小为界面上的每一张轮播图设置背景
+					$('.item').each(function(i, item) {
+						var $item = $(item);
+						// var imgSrc = $item.data(isSmallScreen ? 'image-xs' : 'image-lg');
+						var imgSrc =
+							isSmallScreen ? $item.data('image-xs') : $item.data('image-lg');
+						// 设置背景图片
+						$item.css('backgroundImage','url("' + imgSrc + '")');
+						// 因为我们需要小图时 尺寸等比例变化，所以小图时我们使用img方式
+						if(isSmallScreen) {
+							$item.html('<img src="' + imgSrc + '" alt="" />');
+						} else {
+							$item.empty();
+						}
+					});
+				}
+
+				// // 让window对象立即触发一下resize，初始化div的背景图
+				// $(window).trigger('resize');
+
+				$(window).on('resize', resize).trigger('resize');
+			});
+
+			//使轮播支持触控
+			;
+			(function() {
+				var carousels = $(".carousel"); //获取所有的轮播图
+				var startX, endX, finalMove;
+				var diviation = 60; //让手指滑动一定距离轮播图才工作
+				carousels.on("touchstart", function(event) {
+					// console.log(event.originalEvent.touches[0].pageX);
+					startX = event.originalEvent.touches[0].pageX; //获取手指接触屏幕时的位置
+				});
+				carousels.on("touchmove", function(event) {
+					// console.log(event.originalEvent.touches[0].pageX);
+					endX = event.originalEvent.touches[0].pageX; //手指滑动时该值一直刷新，当手指离开时保留最后一次手指的位置
+				})
+				carousels.on("touchend", function(event) {
+					//console.log(event.originalEvent.touches[0].pageX);
+					finalMove = Math.abs(startX - endX) - diviation;
+					if(finalMove > 0 && (startX - endX) > 0) { //如果手指滑动方向向左，轮播图向右播放一张图片
+						$(this).carousel('next');
+					} else if(finalMove > 0 && (startX - endX) < 0) {
+						$(this).carousel('prev');
+					}
+				})
+			})();
+		</script>
+	</body>
+
+</html>
