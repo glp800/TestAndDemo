@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>document</title>
+		<style type="text/css">
+			#container {
+				width: 200px;
+				height: 200px;
+				background: #CC0033;
+				cursor: pointer;
+			}
+		</style>
+		<!--js区分大小写-->
+		<!--js函数-->
+		<script type="text/javascript">
+			function toGreen() {
+				//声明的变量oDiv和documen……这一大段功能相同
+				var oDiv = document.getElementById('container');
+				//变量结束
+				oDiv.style.width = '300px';
+				oDiv.style.height = '300px';
+				oDiv.style.background = '#99CC66';
+			}
+
+			function toRed() {
+				var oDiv = document.getElementById('container');
+
+				oDiv.style.width = '200px';
+				oDiv.style.height = '200px';
+				oDiv.style.background = '#CC0033'
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="container" onmouseover="toGreen()" onmouseout="toRed()"></div>
+	</body>
+
+</html>

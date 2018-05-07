@@ -1,0 +1,12 @@
+body {
+	background: #666666;
+}
+
+input {
+	width: 80px;
+	height: 30px;
+	background: #FFFF99;
+	cursor: pointer;
+	/*border:0;*/
+	outline:none;
+}

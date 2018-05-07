@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>智能社JS第一课</title>
+		<!--鼠标提示框-->
+		<style type="text/css">
+			#container {
+				width: 240px;
+				color: grey;
+				font-size: 12px;
+				background: ghostwhite;
+				margin: 0;
+				margin: 5px 0 0 5px;
+				padding: 10px;
+				border: solid 1px #e1e1e1;
+				display: none;
+			}
+			
+			#container span,
+			p {
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<input type="checkbox" onmouseover="document.getElementById('container').style.display='block'" onmouseout="document.getElementById('container').style.display='none'" />记住密码
+
+		<div id="container">
+			<p>为了您的信息安全请勿在公共场合记住密码！</p>
+		</div>
+	</body>
+
+</html>
